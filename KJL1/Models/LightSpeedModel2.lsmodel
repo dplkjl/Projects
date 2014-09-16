@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="LightSpeedModel2" targetNamespace="KJL1.Models" databaseProvider="SqlServer2008" connectionString="Data Source=KAREN-LAPTOP;Initial Catalog=Customers;Integrated Security=True;Pooling=False" pluralizedInDatabase="false" mediumTrustCompatibility="false" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
+  <entities>
+    <entity name="Customer" identityType="Int32" cacheExpiry="0" tableName="Customers" identityColumnName="Number">
+      <entityProperties>
+        <entityProperty name="FirstName" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="LastName" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Active" dataType="Boolean" isNullable="true" privateSetter="false" />
+        <entityProperty name="ServiceLevel" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+      <oneToManyAssociations>
+        <oneToManyAssociation Id="991590a8-b7ce-4dca-9f77-64158fc260c2" collectionName="Orders" backreferenceName="CustomerNumber" isNullable="true" columnName="CustomerNumber">
+          <entityMoniker name="/LightSpeedModel2/Order" />
+        </oneToManyAssociation>
+      </oneToManyAssociations>
+    </entity>
+    <entity name="Order" identityType="Int32" cacheExpiry="0" tableName="Orders">
+      <entityProperties>
+        <entityProperty name="Date" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="TotalAmount" dataType="Decimal" isNullable="true" privateSetter="false" />
+      </entityProperties>
+    </entity>
+    <entity name="Product" identityType="Int32" cacheExpiry="0" tableName="Products">
+      <entityProperties>
+        <entityProperty name="Name" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Cost" dataType="Decimal" isNullable="true" privateSetter="false" />
+      </entityProperties>
+      <oneToManyAssociations>
+        <oneToManyAssociation Id="f11ccc25-f152-4fcc-b26d-50e23716e8ad" collectionName="Orders" backreferenceName="Product" isNullable="true">
+          <entityMoniker name="/LightSpeedModel2/Order" />
+        </oneToManyAssociation>
+      </oneToManyAssociations>
+    </entity>
+  </entities>
+</model>

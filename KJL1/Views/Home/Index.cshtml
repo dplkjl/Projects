@@ -1,0 +1,54 @@
+﻿@model KJL1.Models.Customer
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="section 1">
+        <form class="pure-form pure-form-aligned" action="@Url.Action("InputNewCustomer")" method="post">
+
+            <fieldset>
+                <div class="pure-control-group">
+                    @Html.LabelFor(x => x.FirstName)
+                    @Html.TextBoxFor(x => x.FirstName)
+                </div>
+
+                <div class="pure-control-group">
+                    @Html.LabelFor(x => x.LastName)
+                    @Html.TextBoxFor(x => x.LastName)
+                </div>
+
+                <div class="pure-control-group">
+                    @Html.LabelFor(x => x.ServiceLevel)
+                    @Html.TextBoxFor(x => x.ServiceLevel)
+                </div>
+
+                <div class="pure-controls pure-checkbox">
+                    @*@Html.LabelFor(x => x.Active)
+                        @Html.CheckBoxFor(x => x.Active.GetValueOrDefault())*@
+                    <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+        <div class="section 2">
+            <form class="pure-form pure-form-aligned" action="@Url.Action("InputNewProduct")" method="post">
+
+                <fieldset>
+                    <div class="pure-control-group">
+                        @Html.LabelFor(x => x.Product)
+                        @Html.TextBoxFor(x => x.FirstName)
+                    </div>
+
+                    <div class="pure-control-group">
+                        @Html.LabelFor(x => x.LastName)
+                        @Html.TextBoxFor(x => x.LastName)
+                    </div>
+
+ 
+                        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+</div>

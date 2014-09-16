@@ -1,0 +1,29 @@
+﻿@model KJL1.Models.Product
+
+@{
+    ViewBag.Title = "Product Page";
+}
+
+<div class="container">
+    <div class="section 1">
+
+
+        <form class="pure-form pure-form-aligned" action="@Url.Action("SaveProduct")" method="post">
+
+                <fieldset>
+                    <div class="pure-control-group">
+                        @Html.LabelFor(x => x.Product)
+                        @Html.TextBoxFor(x => x.Product)
+                    </div>
+
+                    <div class="pure-control-group">
+                        @Html.LabelFor(x => x.Price)
+                        @Html.TextBoxFor(x => x.Price)
+                    </div>
+
+                        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+</div>
+</div>
