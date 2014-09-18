@@ -1,0 +1,70 @@
+﻿@model Akp.Models.Client
+
+@{
+    ViewBag.Title = "Client Page";
+}
+<body>
+
+    <div class="container">
+        <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <div id="menu">
+                <div class="pure-menu pure-menu-open">
+                    <a class="pure-menu-heading" href="#">Tokomairiro Hauora</a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Current Enrolments</a></li>
+                        <li class="menu-item-divided pure-menu-selected">
+                            <a href="#">Admin Functions</a>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div class="header">
+                    <h1>New Customer Page</h1>
+                    <h2></h2>
+                </div>
+            </div>
+
+            <div class="content">
+                <form class="pure-form pure-form-aligned" action="@Url.Action("InputNewClient")" method="post">
+
+                    <fieldset>
+                        <div class="pure-control-group">
+                            @Html.LabelFor(x => x.FirstNames, "Names: First")
+                            @Html.TextBoxFor(x => x.FirstNames)
+                            @Html.LabelFor(x => x.LastName, "Last")
+                            @Html.TextBoxFor(x => x.LastName)
+                        </div>
+
+                        <div class="pure-control-group">
+                            @Html.LabelFor(x => x.Address2, "Address")
+                            @Html.TextBoxFor(x => x.Address2)
+                            @Html.LabelFor(x => x.Suburb)
+                            @Html.TextBoxFor(x => x.Suburb)
+                            @Html.LabelFor(x => x.City)
+                            @Html.TextBoxFor(x => x.City)
+                        </div>
+                        <div class="pure-control-group">
+                            @Html.LabelFor(x => x.HomePhoneNumber, "Phone: Home")
+                            @Html.TextBoxFor(x => x.HomePhoneNumber)
+                            @Html.LabelFor(x => x.WorkPhoneNumber, "Work")
+                            @Html.TextBoxFor(x => x.WorkPhoneNumber)
+                            @Html.LabelFor(x => x.MobilePhone, "Mobile")
+                            @Html.TextBoxFor(x => x.MobilePhone)
+                        </div>
+
+
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>

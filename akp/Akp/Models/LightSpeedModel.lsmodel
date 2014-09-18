@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="LightSpeedModel" targetNamespace="Akp.Models" databaseProvider="SqlServer2008" connectionString="Data Source=KAREN-LAPTOP;Initial Catalog=AKP_DemoSQL;Integrated Security=True;Pooling=False" pluralizedInDatabase="false" mediumTrustCompatibility="false" checkForMissingKeyTable="false" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
+  <entities>
+    <entity name="AukatiAssessment" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="Provider" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AssessmentId" dataType="Int32" privateSetter="false" />
+        <entityProperty name="EnrolmentDate" dataType="DateTime" privateSetter="false" />
+        <entityProperty name="ProgrammeStatus" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Age" dataType="Int32" isNullable="true" privateSetter="false" />
+        <entityProperty name="StartSmokingAge" dataType="Int32" isNullable="true" privateSetter="false" />
+        <entityProperty name="TimeoffSmoking" dataType="Int32" isNullable="true" privateSetter="false" />
+        <entityProperty name="PregnancyStatus" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="NumberofTailorMades" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AmountofLooseTobacco" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Smokingathome" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="SmokinginCar" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="HouseholdNumber" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Under5" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="RegularSmokers" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Comments" isNullable="true" privateSetter="false" />
+        <entityProperty name="HeardaboutService" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="PrimaryMotivationtoQuit" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Brupropion" dataType="Boolean" privateSetter="false" />
+        <entityProperty name="FirstCigarette" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Nortryptyline" dataType="Boolean" privateSetter="false" />
+        <entityProperty name="ReferralId" dataType="Int16" isNullable="true" privateSetter="false" />
+        <entityProperty name="Smokelyzer" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="TqDate" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="Varenicline" dataType="Boolean" privateSetter="false" />
+        <entityProperty name="ExitDate" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="ExitType" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="ClientsIwi" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="Provider" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Iwi" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="AukatiFollowup" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="Provider" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ClientId" dataType="Double" privateSetter="false" />
+        <entityProperty name="FollowUpType" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="FollowUpDate" dataType="DateTime" privateSetter="false" />
+        <entityProperty name="AssessmentId" dataType="Int32" privateSetter="false" />
+        <entityProperty name="ContactType" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ReasonWhyNot" isNullable="true" privateSetter="false" />
+        <entityProperty name="QuitStatus" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ReasonForStarting" isNullable="true" privateSetter="false" />
+        <entityProperty name="SmokingAtHome" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="SmokingInCar" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="GeneralComments" isNullable="true" privateSetter="false" />
+        <entityProperty name="ReasonNotContacted" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="StaffId" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="6" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Smokelyzer" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="Client" identityType="Int32" cacheExpiry="0" tableName="Clients">
+      <entityProperties>
+        <entityProperty name="Provider" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="LastName" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="25" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="FirstNames" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="25" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Title" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Gender" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Residence" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="35" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Address2" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="30" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Suburb" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="30" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="City" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="35" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="HomePhoneNumber" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="WorkPhoneNumber" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="EmailAddress" isNullable="true" privateSetter="false">
+          <validations>
+            <emailValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="DateofBirth" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="Doctor" dataType="Int16" isNullable="true" privateSetter="false" />
+        <entityProperty name="PrimaryStaffMember" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="6" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="NhiNumber" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="7" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="MaritalStatus" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="RegistrationDate" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="FirstReferralSource" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="CsCardNumber" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="16" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Status" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="EmergencyContactDetails" isNullable="true" privateSetter="false" />
+        <entityProperty name="ResignationDate" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="Comments" isNullable="true" privateSetter="false" />
+        <entityProperty name="Midwife" dataType="Int16" isNullable="true" privateSetter="false" />
+        <entityProperty name="MobilePhone" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="GroupingCode" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+      <oneToManyAssociations>
+        <oneToManyAssociation Id="a7c499bc-3897-4c29-955f-200899a260be" collectionName="AukatiAssessments" backreferenceName="Client" isNullable="false">
+          <entityMoniker name="/LightSpeedModel/AukatiAssessment" />
+        </oneToManyAssociation>
+        <oneToManyAssociation Id="265df2e9-211b-4c95-af19-7467cce6ec79" collectionName="AukatiFollowups" backreferenceName="Id" isNullable="false">
+          <entityMoniker name="/LightSpeedModel/AukatiFollowup" />
+        </oneToManyAssociation>
+        <oneToManyAssociation Id="c8ba8530-aeec-4952-89fb-248c4e239d82" collectionName="ClientsEthnicities" backreferenceName="Client" isNullable="false">
+          <entityMoniker name="/LightSpeedModel/ClientsEthnicity" />
+        </oneToManyAssociation>
+        <oneToManyAssociation Id="237e78af-225e-471e-ba9b-5c111634f8ec" collectionName="ClientsHapus" backreferenceName="Client" isNullable="false">
+          <entityMoniker name="/LightSpeedModel/ClientsHapu" />
+        </oneToManyAssociation>
+        <oneToManyAssociation Id="7097e83a-675c-45de-97ef-2f32af52fb5c" collectionName="ClientsIwis" backreferenceName="Client" isNullable="false">
+          <entityMoniker name="/LightSpeedModel/ClientsIwi" />
+        </oneToManyAssociation>
+      </oneToManyAssociations>
+    </entity>
+    <entity name="ClientsEthnicity" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="Provider" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Ethnicity" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="ClientsHapu" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="Provider" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Hapu" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="75" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+  </entities>
+</model>
