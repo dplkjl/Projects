@@ -290,19 +290,19 @@
         </entityProperty>
       </entityProperties>
       <oneToManyAssociations>
-        <oneToManyAssociation Id="a7c499bc-3897-4c29-955f-200899a260be" collectionName="AukatiAssessments" backreferenceName="Client" isNullable="false">
+        <oneToManyAssociation Id="880937d7-b12b-4672-9504-290aa73b8e11" collectionName="AukatiAssessments" backreferenceName="Client" isNullable="false">
           <entityMoniker name="/LightSpeedModel/AukatiAssessment" />
         </oneToManyAssociation>
-        <oneToManyAssociation Id="265df2e9-211b-4c95-af19-7467cce6ec79" collectionName="AukatiFollowups" backreferenceName="Id" isNullable="false">
+        <oneToManyAssociation Id="5f6a89e0-ff8a-4f65-b4b1-4360fbfb802a" collectionName="AukatiFollowups" backreferenceName="Id" isNullable="false">
           <entityMoniker name="/LightSpeedModel/AukatiFollowup" />
         </oneToManyAssociation>
-        <oneToManyAssociation Id="c8ba8530-aeec-4952-89fb-248c4e239d82" collectionName="ClientsEthnicities" backreferenceName="Client" isNullable="false">
+        <oneToManyAssociation Id="cc38f190-c7d6-4337-bb08-16be38e6725e" collectionName="ClientsEthnicities" backreferenceName="Client" isNullable="false">
           <entityMoniker name="/LightSpeedModel/ClientsEthnicity" />
         </oneToManyAssociation>
-        <oneToManyAssociation Id="237e78af-225e-471e-ba9b-5c111634f8ec" collectionName="ClientsHapus" backreferenceName="Client" isNullable="false">
+        <oneToManyAssociation Id="8d10b0dd-6a5d-4fd8-a958-75bf25c2015a" collectionName="ClientsHapus" backreferenceName="Client" isNullable="false">
           <entityMoniker name="/LightSpeedModel/ClientsHapu" />
         </oneToManyAssociation>
-        <oneToManyAssociation Id="7097e83a-675c-45de-97ef-2f32af52fb5c" collectionName="ClientsIwis" backreferenceName="Client" isNullable="false">
+        <oneToManyAssociation Id="c8fd9220-a80a-409d-8fde-a53c1300088d" collectionName="ClientsIwis" backreferenceName="Client" isNullable="false">
           <entityMoniker name="/LightSpeedModel/ClientsIwi" />
         </oneToManyAssociation>
       </oneToManyAssociations>

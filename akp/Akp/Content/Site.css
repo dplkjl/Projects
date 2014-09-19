@@ -1,24 +1,38 @@
-﻿body {
+﻿/*/*body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+/*.body-content {
     padding-left: 5px;
     padding-right: 5px;
-}
+}*/
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
+/*.dl-horizontal dt {
     white-space: normal;
-}
+}*/
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
+}*/
+ #allclient li.hidden
+{
+    display: none;
+    color: #0000ff;
+
+}
+
+ .sb-search-input {
+	width: 100%;
+    padding: 1px 0 0 3px; 
+    border: 1px solid #1f8dd6;
+     right: auto;
+
 }

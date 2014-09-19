@@ -31,23 +31,36 @@
 
             <div class="content">
                 <div class="pure-g">
+                    <div class="pure-u-1-2"></div>
+                    <div class="pure-u-1-2">
+                        <div id="sb-search" class="sb-search">
+                            <form>
+                                <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+                                <input class="sb-search-submit" type="submit" value="">
+                                <span class="sb-icon-search"></span>
+                            </form>
+                        </div>
+                    </div>
 
                     @*<fieldset>*@
-                                <div class="pure-u-1-2">
-                                    <h2>All Clients</h2>
-                                    <ul></ul>
-                                    <div id="client"></div>
-                                    <p></p>
-                                </div>
-                            <div class="pure-u-1-2">
-                                <h2>Everything else</h2>
+                    <div class="pure-u-1-2">
+                        <h2>All Current Clients</h2>
+                        <ul class="currentclientlist" id="client"></ul>
+                    </div>
+                    <div class="pure-u-1-2">
  
-                                <p></p>
-                            </div>
+                        <h2>All Clients</h2>
+                        <ul class="clientlist" id="allclient"></ul>
+                    </div>
 
                     @*</fieldset>*@
                 </div>
             </div>
         </div>
     </div>
- </body>
+    <script src="/Scripts/classie.js"></script>
+    <script src="/Scripts/uisearch.js"></script>
+    <script>
+        new UISearch(document.getElementById('sb-search'));
+    </script>
+</body>

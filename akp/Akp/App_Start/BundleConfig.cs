@@ -15,7 +15,10 @@ namespace Akp
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                         "~/Scripts/App.js",
                         "~/Scripts/AppClient.js",
-                        "~/Scripts/AppEnrolment.js"));
+                        "~/Scripts/AppEnrolment.js",
+                        "~/Scripts/classie.js",
+                        "~/Scripts/Uisearch.js",
+                        "~/Scripts/ui.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -32,14 +35,16 @@ namespace Akp
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/normalize.css",
-                "~/Content/site.css",
                 "~/Content/pure-release-0.5.0/pure-min.css",
                 "~/Content/pure-release-0.5.0/base.css",
                 "~/Content/pure-release-0.5.0/buttons.css",
                 "~/Content/pure-release-0.5.0/forms.css",
                 "~/Content/pure-release-0.5.0/grids.css",
                 "~/Content/pure-release-0.5.0/menus.css",
-                "~/Content/pure-release-0.5.0/side-menu.css"));
+                "~/Content/pure-release-0.5.0/side-menu.css",
+                "~/Content/component.css",
+                "~/Content/site.css"
+                ));
 
 
             // Set EnableOptimizations to false for debugging. For more information,

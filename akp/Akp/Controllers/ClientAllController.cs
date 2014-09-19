@@ -10,7 +10,7 @@ using Mindscape.LightSpeed.Logging;
 
 namespace Akp.Controllers
 {
-    public class ClientController : ApiController
+    public class ClientAllController : ApiController
     {
 
         private readonly Lazy<LightSpeedContext<LightSpeedModelUnitOfWork>> _lazyContext = new Lazy<LightSpeedContext<LightSpeedModelUnitOfWork>>(
@@ -29,19 +29,19 @@ namespace Akp.Controllers
         }
 
 
-        // GET: api/Client
+        // GET: api/ClientAll
         public IEnumerable<Client> Get()
         {
             using (var uow = Context.CreateUnitOfWork())
             {
-                var currentClients = uow.Clients.Where(w => w.Status == "On the Programme").ToList();
-                return currentClients;
+                var allClients = uow.Clients.ToList();
+                return allClients;
             }
         }
 
         // POST: api/Client
         [HttpPost]
-        public IEnumerable<Client> FindbyName(string LastName, string FirstName)
+        public IEnumerable<Client> FindbyName()
         {
             using (var uow = Context.CreateUnitOfWork())
             {
