@@ -1,6 +1,8 @@
 ![alt text](https://github.com/dplkjl/Projects/blob/master/akp/InitialScreen1.PNG "Image 1")
-![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen2.PNG" "Image 2")
-![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen3.PNG" "Image 3")
+
+![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen2.PNG "Image 2")
+
+![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen3.PNG "Image 3")
 
 Code
 function SetupSearchClients() {
