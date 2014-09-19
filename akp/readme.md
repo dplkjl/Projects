@@ -11,7 +11,6 @@ Search results displayed:
 
 Code:
 
-
 function SetupSearchClients() {
     $.extend($.expr[':'], {
         'containsi': function (elem, i, match, array) {
@@ -32,3 +31,6 @@ function SetupSearchClients() {
                 return addedClass;
             }).filter(":containsi('" + search + "')").removeClass("hidden");
     });
+
+ 
+}
