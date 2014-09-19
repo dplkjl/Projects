@@ -3,7 +3,7 @@
     return string;
 }
 function BuildStringAllClients(client) {
-    var string = "<li class='hidden'>" + client.FirstNames + " " + client.LastName + "(Id:"+client.Id + ") Ph: " + client.HomePhoneNumber + "</li>";
+    var string = "<li class='hidden'>" + client.FirstNames + " " + client.LastName + " (Id:"+client.Id + ") Ph: " + client.HomePhoneNumber + "</li>";
     return string;
 }
 function BuildSeeNotesButton(client) {

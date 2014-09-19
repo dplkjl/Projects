@@ -39,14 +39,37 @@ namespace Akp.Controllers
             }
         }
 
-        // POST: api/Client
-        [HttpPost]
+        // Get: api/Client
+        [HttpGet]
         public IEnumerable<Client> FindbyName(string LastName, string FirstName)
         {
             using (var uow = Context.CreateUnitOfWork())
             {
-                var currentClients = uow.Clients.Where(w => w.Status == "On the Programme").ToList();
-                return currentClients;
+                var foundClient = uow.Clients.Where(w => w.LastName == LastName && w.FirstNames == FirstName);
+                return foundClient;
+            }
+        }
+        // Get: api/Client
+        [HttpGet]
+        public IEnumerable<Client> FindbyId(int clientId)
+        {
+            using (var uow = Context.CreateUnitOfWork())
+            {
+                var foundClient = uow.Clients.Where(w => w.Id == clientId);
+                return foundClient;
+            }
+        }
+        // POST: api/Client
+        [HttpPost]
+        public void AddNewClient(Client newClient)
+        {
+            using (var uow = Context.CreateUnitOfWork())
+            {
+                Client _newClient = new Client();
+                _newClient = newClient;
+                uow.Add(_newClient);
+                uow.SaveChanges();
+
             }
         }
     }
