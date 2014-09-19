@@ -9,7 +9,9 @@ Adding some text:
 Search results displayed:
 ![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen3.png "Image 3")
 
-Code
+Code:
+
+
 function SetupSearchClients() {
     $.extend($.expr[':'], {
         'containsi': function (elem, i, match, array) {
