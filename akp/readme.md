@@ -1,8 +1,13 @@
+Retracted Search button:
 ![alt text](https://github.com/dplkjl/Projects/blob/master/akp/InitialScreen1.PNG "Image 1")
 
+
+Adding some text:
 ![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen2.PNG "Image 2")
 
-![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen3.PNG "Image 3")
+
+Search results displayed:
+![alt text](https://github.com/dplkjl/Projects/blob/master/akp/Screen3.png "Image 3")
 
 Code
 function SetupSearchClients() {
