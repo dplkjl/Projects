@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKP2withoutLightspeed", "AKP2withoutLightspeed\AKP2withoutLightspeed.csproj", "{F6D7B712-2F0F-438F-896D-F1F3783BB207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKP2withoutLightspeed.Tests", "AKP2withoutLightspeed.Tests\AKP2withoutLightspeed.Tests.csproj", "{4484DE20-78D6-4D62-BA2D-71388004A658}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6D7B712-2F0F-438F-896D-F1F3783BB207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D7B712-2F0F-438F-896D-F1F3783BB207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D7B712-2F0F-438F-896D-F1F3783BB207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D7B712-2F0F-438F-896D-F1F3783BB207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4484DE20-78D6-4D62-BA2D-71388004A658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4484DE20-78D6-4D62-BA2D-71388004A658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4484DE20-78D6-4D62-BA2D-71388004A658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4484DE20-78D6-4D62-BA2D-71388004A658}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

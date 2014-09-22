@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4D74FE37-F594-4D94-9572-629DF96C4CD2}</ProjectGuid>
+    <ProjectGuid>{F6D7B712-2F0F-438F-896D-F1F3783BB207}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Akp</RootNamespace>
-    <AssemblyName>Akp</AssemblyName>
+    <RootNamespace>AKP2withoutLightspeed</RootNamespace>
+    <AssemblyName>AKP2withoutLightspeed</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -40,17 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Mindscape.LightSpeed">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\Mindscape\LightSpeed\Bin\Mindscape.LightSpeed.dll</HintPath>
-    </Reference>
-    <Reference Include="Mindscape.LightSpeed.Linq">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\Mindscape\LightSpeed\Bin\Mindscape.LightSpeed.Linq.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -177,103 +169,34 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ClientAllController.cs" />
-    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AukatiAssessmentController.cs" />
+    <Compile Include="Models\Clients.cs" />
+    <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\LightSpeedModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LightSpeedModel.lsmodel</DependentUpon>
-    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Controllers\StaffsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\component.css" />
-    <Content Include="Content\default.css" />
-    <Content Include="Content\normalize.css" />
-    <Content Include="Content\pure-release-0.5.0\base-context-min.css" />
-    <Content Include="Content\pure-release-0.5.0\base-context.css" />
-    <Content Include="Content\pure-release-0.5.0\base-min.css" />
-    <Content Include="Content\pure-release-0.5.0\base.css" />
-    <Content Include="Content\pure-release-0.5.0\buttons-core-min.css" />
-    <Content Include="Content\pure-release-0.5.0\buttons-core.css" />
-    <Content Include="Content\pure-release-0.5.0\buttons-min.css" />
-    <Content Include="Content\pure-release-0.5.0\buttons.css" />
-    <Content Include="Content\pure-release-0.5.0\forms-min.css" />
-    <Content Include="Content\pure-release-0.5.0\forms-nr-min.css" />
-    <Content Include="Content\pure-release-0.5.0\forms-nr.css" />
-    <Content Include="Content\pure-release-0.5.0\forms.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-core-min.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-core.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-min.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-responsive-min.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-responsive-old-ie-min.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-responsive-old-ie.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-responsive.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-units-min.css" />
-    <Content Include="Content\pure-release-0.5.0\grids-units.css" />
-    <Content Include="Content\pure-release-0.5.0\grids.css" />
-    <Content Include="Content\pure-release-0.5.0\menus-core-min.css" />
-    <Content Include="Content\pure-release-0.5.0\menus-core.css" />
-    <Content Include="Content\pure-release-0.5.0\menus-min.css" />
-    <Content Include="Content\pure-release-0.5.0\menus-nr-min.css" />
-    <Content Include="Content\pure-release-0.5.0\menus-nr.css" />
-    <Content Include="Content\pure-release-0.5.0\menus-paginator-min.css" />
-    <Content Include="Content\pure-release-0.5.0\menus-paginator.css" />
-    <Content Include="Content\pure-release-0.5.0\menus.css" />
-    <Content Include="Content\pure-release-0.5.0\pure-min.css" />
-    <Content Include="Content\pure-release-0.5.0\pure-nr-min.css" />
-    <Content Include="Content\pure-release-0.5.0\pure-nr.css" />
-    <Content Include="Content\pure-release-0.5.0\pure.css" />
-    <Content Include="Content\pure-release-0.5.0\side-menu.css" />
-    <Content Include="Content\pure-release-0.5.0\tables-min.css" />
-    <Content Include="Content\pure-release-0.5.0\tables.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\codropsicons\codropsicons.svg" />
-    <Content Include="fonts\codropsicons\license.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\icomoon\icomoon.dev.svg" />
-    <Content Include="fonts\icomoon\icomoon.svg" />
-    <Content Include="fonts\icomoon\license.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\App.js" />
-    <Content Include="Scripts\AppClient.js" />
-    <Content Include="Scripts\AppEnrolment.js" />
-    <Content Include="Scripts\AppNotImplemented.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\pure-release-0.5.0\bower.json" />
-    <Content Include="Content\pure-release-0.5.0\HISTORY.md" />
-    <Content Include="Content\pure-release-0.5.0\LICENSE.md" />
-    <Content Include="Content\pure-release-0.5.0\README.md" />
-    <Content Include="Models\LightSpeedModel.lsmodel">
-      <Generator>LightSpeedModelGenerator</Generator>
-      <LastGenOutput>LightSpeedModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\LightSpeedModel.lsmodel.diagram">
-      <DependentUpon>LightSpeedModel.lsmodel</DependentUpon>
-    </Content>
-    <Content Include="fonts\codropsicons\.DS_Store" />
-    <Content Include="fonts\codropsicons\codropsicons.eot" />
-    <Content Include="fonts\codropsicons\codropsicons.ttf" />
-    <Content Include="fonts\codropsicons\codropsicons.woff" />
-    <Content Include="fonts\icomoon\icomoon.eot" />
-    <Content Include="fonts\icomoon\icomoon.ttf" />
-    <Content Include="fonts\icomoon\icomoon.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\classie.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -282,11 +205,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\modernizr.custom.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\ui.js" />
-    <Content Include="Scripts\uisearch.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -326,13 +246,24 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Client.cshtml" />
-    <Content Include="Views\Home\Index - Copy.cshtml" />
+    <Content Include="Views\Clients\Create.cshtml" />
+    <Content Include="Views\Clients\Delete.cshtml" />
+    <Content Include="Views\Clients\Details.cshtml" />
+    <Content Include="Views\Clients\Edit.cshtml" />
+    <Content Include="Views\Clients\Index.cshtml" />
+    <Content Include="Views\Doctors\Create.cshtml" />
+    <Content Include="Views\Doctors\Delete.cshtml" />
+    <Content Include="Views\Doctors\Details.cshtml" />
+    <Content Include="Views\Doctors\Edit.cshtml" />
+    <Content Include="Views\Doctors\Index.cshtml" />
+    <Content Include="Views\Staffs\Create.cshtml" />
+    <Content Include="Views\Staffs\Delete.cshtml" />
+    <Content Include="Views\Staffs\Details.cshtml" />
+    <Content Include="Views\Staffs\Edit.cshtml" />
+    <Content Include="Views\Staffs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Plumbing\" />
-    <Folder Include="Views\AukatiAssessment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -357,9 +288,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50001</DevelopmentServerPort>
+          <DevelopmentServerPort>52052</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50001/</IISUrl>
+          <IISUrl>http://localhost:52052/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

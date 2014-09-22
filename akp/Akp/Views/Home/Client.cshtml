@@ -6,7 +6,7 @@
 <body>
 
     <div class="container">
-        <div id="layout">
+        <a id="layout">
             <!-- Menu toggle -->
             <a href="#menu" id="menuLink" class="menu-link">
                 <!-- Hamburger icon -->
@@ -32,10 +32,11 @@
                 </div>
             </div>
 
-            <div class="content">
+            <a class="content">
                 <form class="pure-form pure-form-aligned" action="@Url.Action("InputNewClient")" method="post">
 
                     <fieldset>
+                        @*<a href "">*@
                         <div class="pure-control-group">
                             @Html.LabelFor(x => x.FirstNames, "Names: First")
                             @Html.TextBoxFor(x => x.FirstNames)
@@ -64,7 +65,7 @@
                     </fieldset>
                 </form>
 
-            </div>
+            </a>
         </div>
     </div>
 </body>
